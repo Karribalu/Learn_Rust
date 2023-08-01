@@ -3,10 +3,15 @@ struct User {
     age: u32,
     active: bool,
 }
+struct User2 {
+    name: String,
+    age: u32,
+    active: bool,
+}
 fn main() {
     let user1 = User {
         active: true,
-        name: String::from("bala"),
+        name: String::from("bala subramanyam"),
         age: 30,
     };
 
