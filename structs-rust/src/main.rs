@@ -1,20 +1,19 @@
-struct User {
-    name: String,
-    age: u32,
-    active: bool,
+#[derive(Debug)]
+struct Rectangle {
+    width: u32,
+    height: u32,
 }
 
 fn main() {
-    let user1 = User {
-        active: true,
-        name: String::from("bala subramanyam"),
-        age: 30,
+    let rect1 = Rectangle {
+        width: 10,
+        height: 30,
     };
+    println!("the area is {}", area(&rect1));
+    print!("{:#?}", rect1);
+    dbg!(&rect1);
+}
 
-    let user2 = User {
-        name: String::from("Anoosha"),
-        ..user1
-    };
-
-    println!("{} {} {}", user1.active, user1.age, user1.name);
+fn area(rect: &Rectangle) -> u32 {
+    rect.height * rect.width
 }
