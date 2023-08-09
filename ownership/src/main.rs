@@ -4,8 +4,8 @@ fn main() {
     println!("{}", s);
 
     //Move ownership
-    let s1 = String::from("hello");
-    let s2 = s1;
+    // let s1 = String::from("hello");
+    // let s2 = s1;
     // println!("{}, world!", s1); // error[E0382]: borrow of moved value: `s1`
 
     //Clone

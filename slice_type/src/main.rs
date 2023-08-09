@@ -1,10 +1,10 @@
 fn main() {
     let str = String::from("hello world");
-    let str_literal = "hello world";
-    let wordIndex = first_word(&str);
+    // let str_literal = "hello world";
+    let word_index = first_word(&str);
     let word = first_word_string(&str);
     let temp = first_word(&str[..]);
-    println!("{} is the index for first word", wordIndex);
+    println!("{} is the index for first word", word_index);
     println!("{} is the first word", word);
     println!("{} is the first word", temp);
 
