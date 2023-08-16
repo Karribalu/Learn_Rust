@@ -13,9 +13,12 @@ pub fn lifetime_2() {
 }
 pub fn lifetime_3() {
     let str1 = String::from("hello");
-    let str2 = String::from("world");
-    let longest = longest(&str1, &str2);
-    println!("{}", longest);
+    let longest_word: &str;
+    {
+        let str2 = String::from("world");
+        longest_word = longest(&str1, &str2);
+        println!("{}", longest_word);
+    }
 
     fn longest<'a>(str1: &'a str, str2: &'a str) -> &'a str {
         if str1.len() > str2.len() {
@@ -26,4 +29,19 @@ pub fn lifetime_3() {
     }
 }
 
+pub fn lifetime_4() {
+    use std::fmt::Display;
+    fn logest_with_ann<'a, T>(x: &'a str, y: &'a str, ann: T) -> &'a str
+    where
+        T: Display,
+    {
+        println!("Announcement {}", ann);
+        if x.len() > y.len() {
+            x
+        } else {
+            y
+        }
+    }
 
+    logest_with_ann("some", "someother", String::from("hello"));
+}
