@@ -30,4 +30,5 @@ fn main() {
         println!("Popped: {}", item);
     }
     println!("Is stack empty: {}", stack.is_empty());
+
 }
