@@ -1,7 +1,7 @@
 mod generics;
-struct Gen<SOME>{
-    a:SOME,
-    b:SOME
+struct Gen<SOME> {
+    a: SOME,
+    b: SOME,
 }
 fn main() {
     // generics::generics_1();
