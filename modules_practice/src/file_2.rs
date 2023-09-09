@@ -1,4 +1,12 @@
 mod person{
+    ///----------------------------------
+    /// This is for multiplication
+    /// ```
+    /// let n = 4
+    /// assert_eq!(4,n);
+    /// ```
+    //! Some function
+    /// ---------------------------------
     pub struct person_info{
         pub name: String,
         pub age: i32
